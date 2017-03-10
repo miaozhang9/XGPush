@@ -8,6 +8,10 @@ import android.widget.AbsListView;
 import android.widget.AbsSpinner;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.miaoz.xgpush.R;
+import com.example.miaoz.xgpush.view.LoadingView;
 
 import rx.Subscription;
 
@@ -59,25 +63,66 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         return  noNetSubTree;
     }
 
+    protected void showLoadingView() {
+        View view = inflateSubView(R.id.activity_loading_stub, R.id.activity_loading_subTree);
+        if (view != null) {
+            LoadingView loadingView = (LoadingView) view.findViewById(R.id.loading_view);
+            if (loadingView != null) {
+                loadingView.showLoading(true, R.string.loading_busy, 0);
+            }
+        }
+    }
 
+    protected void dismissLoadingView() {
+        View view = findViewById(R.id.activity_loading_subTree);
+        if (view != null) {
+            LoadingView loadingView = (LoadingView) view.findViewById(R.id.loading_view);
+            if (loadingView != null) {
+                if (loadingView != null) {
+                    loadingView.hidenLoading();
+                }
+            }
+        }
+    }
 
+    protected void showNetErroView(int id) {
+        View view = inflateSubView(R.id.activity_net_error_stub,R.id.activity_net_error_stubTree);
+        if (view != null) {
+            view.setVisibility(View.VISIBLE);
+            //注意这里是fragment_net_error_subTree
+            View refresh = view.findViewById(R.id.activity_net_error_stubTree);
+            TextView textView = (TextView) view.findViewById(R.id.error_saying_bg_textview);
+            if (textView != null) {
+                textView.setText(id);
+            }
+            if (refresh != null) {
+                refresh.setOnClickListener(this);
+            }
+        }
+    }
 
+    protected void dismissNetErroView() {
+        View view = findViewById(R.id.activity_net_error_stubTree);
+        if (view != null) {
+            view.setVisibility(View.GONE);
+        }
+    }
 
+    /**
+     * 内容为空时显示
+     * */
+    protected  void showContentEmptyView() {
+        View view = inflateSubView(R.id.activity_empty_stub,R.id.activity_empty_stubTree);
+        view.setVisibility(View.VISIBLE);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    protected void dismissContentEmptyView() {
+        View view = findViewById(R.id.activity_empty_stubTree);
+        if (view != null) {
+            view.setVisibility(View.GONE);
+        }
+        
+    }
 
     @Override
     public void onClick(View view) {
