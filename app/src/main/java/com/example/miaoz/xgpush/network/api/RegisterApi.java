@@ -13,5 +13,5 @@ import rx.Observable;
 public interface RegisterApi {
     @FormUrlEncoded
     @POST("/LoginServer/register.php")
-    Observable<ResultReturn> register(@Field("name") String name, @Field("email") String email, @Field("password") String password);
+    Observable<ResultReturn> register(@Field("name") String name, @Field("email") String email, @Field("contact") String contact, @Field("password") String password);
 }

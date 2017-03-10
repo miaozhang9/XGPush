@@ -121,7 +121,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         if (view != null) {
             view.setVisibility(View.GONE);
         }
-        
+
     }
 
     @Override

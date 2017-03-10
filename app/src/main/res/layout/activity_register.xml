@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/edt_reg_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:ellipsize="start"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Your Name"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/lime"
+            android:textColorHint="@color/olive"
+            />
+        <EditText
+            android:id="@+id/edt_reg_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:ellipsize="start"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/lime"
+            android:textColorHint="@color/olive"
+            />
+
+        <EditText
+            android:id="@+id/edt_reg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:ellipsize="start"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/lime"
+            android:textColorHint="@color/olive"
+            />
+
+        <EditText
+            android:id="@+id/edt_reg_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:ellipsize="start"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Contact"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/lime"
+            android:textColorHint="@color/olive"
+            />
+
+        <Button
+            android:id="@+id/btn_reg_submit"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:text="Register"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <ViewStub
+        android:id="@+id/activity_loading_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/activity_loading_subTree"
+        android:layout="@layout/common_loading" />
+
+    <ViewStub
+        android:id="@+id/activity_net_error_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/activity_net_error_subTree"
+        android:layout="@layout/common_net_error_layout" />
+
+    <ViewStub
+        android:id="@+id/activity_empty_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/activity_empty_subTree"
+        android:layout="@layout/common_tips_layout" />
+
+</RelativeLayout>
