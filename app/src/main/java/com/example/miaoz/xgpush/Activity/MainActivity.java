@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.miaoz.xgpush.R;
 import com.tencent.android.tpush.XGIOperateCallback;
@@ -60,6 +61,11 @@ public class MainActivity extends BaseActivity {
                 Log.v("TPush", "注册失败,错误码为：" + errCode + ",错误信息：" + msg);
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     @Override
