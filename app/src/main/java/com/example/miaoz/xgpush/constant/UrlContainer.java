@@ -5,4 +5,5 @@ package com.example.miaoz.xgpush.constant;
  */
 public class UrlContainer {
     public static  String BASE_URL = "http:192.168.201.236";
+
 }
