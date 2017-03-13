@@ -1,6 +1,7 @@
 package com.example.miaoz.xgpush.view;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,18 @@ public class LoadingView extends LinearLayout {
         super(context);
         initView(context);
     }
+
+    public LoadingView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        initView(context);
+    }
+
+    public LoadingView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        initView(context);
+    }
+
+
 
     private  void stopLoadingAnimation() {
         progressView.clearAnimation();
@@ -63,7 +76,8 @@ public class LoadingView extends LinearLayout {
     private void showAnimLoading(int loadTextStringId) {
         setVisibility(View.VISIBLE);
         if (loadTextStringId != 0) {
-            textView.setText(loadTextStringId);
+            String tstring = getResources().getString(loadTextStringId);
+            textView.setText(tstring);
         } else {
             textView.setText("努力加载中...");
         }
@@ -87,7 +101,8 @@ public class LoadingView extends LinearLayout {
             setVisibility(View.VISIBLE);
             textView.setVisibility(View.VISIBLE);
             if (loadTextStringId > 0) {
-                textView.setText(loadTextStringId);
+
+                textView.setText(getResources().getString(loadTextStringId));
             } else {
                 textView.setText("努力加载中...");
             }

@@ -1,27 +1,11 @@
 package com.example.miaoz.xgpush.Activity;
 
-import android.util.Log;
-
-import com.example.miaoz.xgpush.network2.DsdServiceFactory;
-import com.google.gson.Gson;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
-
 /**
  * Created by miaoz on 2017/3/13.
  */
 public class Login2Activity extends BaseActivity {
 
-
+/**
 
     private void callAllMessage(String status) {
 
@@ -96,4 +80,5 @@ public class Login2Activity extends BaseActivity {
         });
 
     }
+ ***/
 }

@@ -13,7 +13,6 @@ import com.example.miaoz.xgpush.model.ResultReturn;
 import com.example.miaoz.xgpush.network.Network;
 
 import butterknife.Bind;
-import butterknife.BindInt;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import rx.Observer;
@@ -28,7 +27,7 @@ public class RegisterActivity extends BaseActivity {
     EditText edtRegUsername;
     @Bind(R.id.edt_reg_password)
     EditText edtRegPassword;
-    @BindInt(R.id.edt_reg_email)
+    @Bind(R.id.edt_reg_email)
     EditText edtRegEmail;
     @Bind(R.id.edt_reg_contact)
     EditText edtRegContact;

@@ -64,7 +64,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     protected void showLoadingView() {
-        View view = inflateSubView(R.id.activity_loading_stub, R.id.activity_loading_subTree);
+        View view = inflateSubView(R.id.activity_loading_stub,
+                R.id.activity_loading_subTree);
         if (view != null) {
             LoadingView loadingView = (LoadingView) view.findViewById(R.id.loading_view);
             if (loadingView != null) {
