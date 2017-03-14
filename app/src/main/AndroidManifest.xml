@@ -37,6 +37,9 @@
         </activity>
         <activity android:name=".Activity.RegisterActivity" />
         <activity android:name=".Activity.MainActivity"></activity>
+        <activity android:name=".Activity.PieActivity"></activity>
+
+
 
         <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
         <activity

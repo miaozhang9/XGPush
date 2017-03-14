@@ -58,6 +58,14 @@
             android:text=""
             android:textColor="@color/olive"
             />
+        <Button
+            android:id="@+id/btn_pie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="go Pie"
+            android:textColor="@color/yellow"
+            />
     </LinearLayout>
 
     <ViewStub

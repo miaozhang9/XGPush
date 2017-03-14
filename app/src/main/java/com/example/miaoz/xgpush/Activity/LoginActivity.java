@@ -35,6 +35,8 @@ public class LoginActivity extends BaseActivity {
     Button btnRegister;
     @Bind(R.id.tv_response)
     TextView tvResponse;
+    @Bind(R.id.btn_pie)
+    Button btnPie;
 
     Observer<ResultReturn> observer = new Observer<ResultReturn>() {
         @Override
@@ -74,7 +76,7 @@ public class LoginActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_login, R.id.btn_register})
+    @OnClick({R.id.btn_login, R.id.btn_register, R.id.btn_pie})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_login:
@@ -83,6 +85,8 @@ public class LoginActivity extends BaseActivity {
                 break;
             case R.id.btn_register:
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            case R.id.btn_pie:
+                startActivity(new Intent(LoginActivity.this,PieActivity.class));
         }
 
     }
